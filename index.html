@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NotFound404 | Prot&oacute;tipo de Seguran&ccedil;a - Smart Glasses</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__body">
+      <span class="hero__eyebadge">NotFound404 | GrandPrix de Inova&ccedil;&atilde;o 2026</span>
+      <h1>Simula&ccedil;&atilde;o de seguran&ccedil;a para Smart Glasses com IA</h1>
+      <p>N&oacute;s da NotFound404 mostramos como os dados saem dos &oacute;culos, passam pela rede segura, chegam &agrave; IA e s&atilde;o protegidos no banco de dados.</p>
+      <div class="hero__actions">
+        <button id="startFlow" type="button">Abrir arquitetura</button>
+        <span class="flow-status">Status: <strong id="status-badge">Parado</strong></span>
+      </div>
+    </div>
+    <div class="hero__preview" aria-label="Resumo da arquitetura">
+      <span class="hero__icon" aria-hidden="true">AR</span>
+      <p>Desafio GrandPrix de Inova&ccedil;&atilde;o 2026: Ciberseguran&ccedil;a e &Eacute;tica Digital.</p>
+    </div>
+  </header>
+
+  <nav class="tabs" aria-label="Navega&ccedil;&atilde;o principal">
+    <button class="tab-button active" data-tab="menu" type="button">Menu</button>
+    <button class="tab-button" data-tab="simulation" type="button" disabled>Simula&ccedil;&atilde;o</button>
+    <button class="tab-button" data-tab="about" type="button">Arquitetura</button>
+  </nav>
+
+  <main id="menu" class="tab-content active">
+    <section class="menu-container">
+      <div class="menu-content">
+        <p class="section-kicker">N&oacute;s da NotFound404</p>
+        <h2>Do operador &agrave; IA, com seguran&ccedil;a em cada etapa</h2>
+        <p class="menu-description">Criamos esta demonstra&ccedil;&atilde;o para o GrandPrix de Inova&ccedil;&atilde;o 2026, no tema de Ciberseguran&ccedil;a e &Eacute;tica Digital. Aqui, simulamos um operador usando Smart Glasses, com valida&ccedil;&atilde;o de sess&atilde;o, prote&ccedil;&atilde;o do caminho, processamento por IA e registro dos eventos de seguran&ccedil;a.</p>
+        <div class="objective-grid">
+          <article>
+            <strong>Confidencialidade</strong>
+            <span>TLS protege o dado em tr&acirc;nsito e AES protege o banco em repouso.</span>
+          </article>
+          <article>
+            <strong>Integridade</strong>
+            <span>Os pacotes seguem uma ordem clara, com rastreabilidade.</span>
+          </article>
+          <article>
+            <strong>&Eacute;tica digital</strong>
+            <span>O acesso pode ser revogado quando o dado n&atilde;o deve ser compartilhado ou for usado de forma indevida.</span>
+          </article>
+        </div>
+        <div class="menu-actions">
+          <button id="start-game" class="start-btn" type="button">Iniciar prot&oacute;tipo</button>
+          <button id="show-help" class="help-btn" type="button">Ver arquitetura</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <main id="simulation" class="tab-content">
+    <section class="simulation-dashboard">
+      <div class="sim-header">
+        <div class="sim-status">
+          <span class="status-label">Estado operacional</span>
+          <span id="sim-status" class="status-indicator parado">Parado</span>
+        </div>
+        <div class="sim-meta" aria-label="Indicadores da simula&ccedil;&atilde;o">
+          <span>Pacotes seguros <strong id="packets-count">0/3</strong></span>
+          <span>Incidentes tratados <strong id="threats-count">0/0</strong></span>
+          <span>Falhas <strong id="failures-count">0</strong></span>
+        </div>
+      </div>
+
+      <div class="sim-grid">
+        <section class="sim-section sim-section--wide">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Nossa demonstra&ccedil;&atilde;o</p>
+              <h2>Fluxo seguro dos dados</h2>
+            </div>
+            <button id="issue-token" class="secondary-btn" type="button">Emitir token tempor&aacute;rio</button>
+          </div>
+
+          <div class="architecture-map" id="architecture-map">
+            <div class="architecture-node" id="node-identity" data-stage="-1">
+              <span class="node-index">01</span>
+              <h3>IAM e ponto digital</h3>
+              <p>Identidade, MFA e token tempor&aacute;rio do operador.</p>
+              <div id="token-container" class="packet-holder"></div>
+            </div>
+
+            <div class="architecture-node drop-node" id="node-glasses" data-stage="0">
+              <span class="node-index">02</span>
+              <h3>Smart Glasses</h3>
+              <p>Captura local com sess&atilde;o autenticada.</p>
+              <button id="generate-data" class="generate-btn" type="button" disabled>Gerar pacote de campo</button>
+              <div id="data-container" class="packet-holder"></div>
+            </div>
+
+            <div class="architecture-node drop-node" id="node-edge" data-stage="1">
+              <span class="node-index">03</span>
+              <h3>Edge Gateway</h3>
+              <p>Valida&ccedil;&atilde;o do dispositivo e filtragem inicial.</p>
+            </div>
+
+            <div class="architecture-node drop-node" id="node-transport" data-stage="2">
+              <span class="node-index">04</span>
+              <h3>TLS 1.3</h3>
+              <p>Criptografia do canal enquanto o dado trafega.</p>
+            </div>
+
+            <div class="architecture-node drop-node" id="node-ai" data-stage="3">
+              <span class="node-index">05</span>
+              <h3>IA corporativa</h3>
+              <p>Processamento com escopo m&iacute;nimo e pol&iacute;ticas de acesso.</p>
+            </div>
+
+            <div class="architecture-node drop-node" id="node-data" data-stage="4">
+              <span class="node-index">06</span>
+              <h3>Banco de dados em repouso + AES-256</h3>
+              <p>Dados parados no banco com criptografia em repouso.</p>
+            </div>
+
+            <div class="architecture-node drop-node" id="node-response" data-stage="5">
+              <span class="node-index">07</span>
+              <h3>Resposta ao operador</h3>
+              <p>Resultado volta aos &oacute;culos. DLP e SIEM acompanham em segundo plano.</p>
+            </div>
+
+            <div id="threat-zone" class="threat-zone" aria-live="polite">
+              <strong id="threat-title">Incidente</strong>
+              <span id="threat-detail">Aguardando evento</span>
+            </div>
+          </div>
+        </section>
+
+        <aside class="sim-section">
+          <p class="section-kicker">Controles</p>
+          <h2>A&ccedil;&otilde;es de seguran&ccedil;a</h2>
+          <div id="threat-alert" class="threat-alert-box" hidden>
+            <strong>Problema ativo:</strong>
+            <span id="active-threat-name">evento em an&aacute;lise</span>
+            <small id="required-controls">Aguardando classifica&ccedil;&atilde;o</small>
+          </div>
+          <div class="action-buttons">
+            <button id="action-tls" class="control-btn" type="button" disabled>Proteger caminho com TLS</button>
+            <button id="action-aes" class="control-btn" type="button" disabled>Validar AES em repouso</button>
+            <button id="action-iam" class="control-btn" type="button" disabled>Revogar sess&atilde;o IAM</button>
+            <button id="action-edge" class="control-btn" type="button" disabled>Isolar no Edge Gateway</button>
+            <button id="finish-simulation" class="finish-btn" type="button" disabled>Finalizar e ver estat&iacute;sticas</button>
+            <button id="reset-simulation" class="secondary-btn" type="button">Reiniciar simula&ccedil;&atilde;o</button>
+            <button id="clear-logs" class="secondary-btn" type="button">Limpar logs</button>
+          </div>
+
+          <div class="validation-checklist">
+            <div class="check-item" id="check-auth"><span>Sess&atilde;o validada</span><strong>pendente</strong></div>
+            <div class="check-item" id="check-encryption"><span>TLS aplicado no caminho</span><strong>pendente</strong></div>
+            <div class="check-item" id="check-kms"><span>AES aplicado no banco</span><strong>pendente</strong></div>
+            <div class="check-item" id="check-dlp"><span>DLP verificou perda de dados</span><strong>pendente</strong></div>
+            <div class="check-item" id="check-siem"><span>SIEM registrou os eventos</span><strong>pendente</strong></div>
+          </div>
+
+          <div class="stats-preview" aria-label="Resumo estat&iacute;stico">
+            <h3>Estat&iacute;sticas ao vivo</h3>
+            <div><span>Progresso</span><strong id="live-progress">0%</strong></div>
+            <div><span>Controles validados</span><strong id="live-controls">0/5</strong></div>
+            <div><span>Taxa de tratamento</span><strong id="live-containment">0%</strong></div>
+            <div><span>Classifica&ccedil;&atilde;o</span><strong id="live-rating">Aguardando</strong></div>
+          </div>
+        </aside>
+
+        <section class="sim-section full-width">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Logs</p>
+              <h2>Eventos da simula&ccedil;&atilde;o</h2>
+            </div>
+            <span class="log-hint">Monitoramento em tempo real</span>
+          </div>
+          <div id="log-console" class="log-console-pro" aria-live="polite">
+            <p>[INIT] Sistema aguardando o in&iacute;cio da simula&ccedil;&atilde;o</p>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <main id="about" class="tab-content">
+    <section class="layout">
+      <div class="diagram-panel">
+        <p class="section-kicker">Nosso roteiro</p>
+        <h2>O que n&oacute;s apresentamos neste prot&oacute;tipo</h2>
+        <div class="tech-grid">
+          <article class="tech-card">
+            <h3>GrandPrix 2026</h3>
+            <p>Com este prot&oacute;tipo, respondemos ao desafio de Ciberseguran&ccedil;a e &Eacute;tica Digital mostrando prote&ccedil;&atilde;o t&eacute;cnica e responsabilidade no uso dos dados.</p>
+          </article>
+          <article class="tech-card">
+            <h3>Identidade e sess&atilde;o</h3>
+            <p>O IAM valida quem est&aacute; usando o sistema e pode revogar a sess&atilde;o quando houver mau uso.</p>
+          </article>
+          <article class="tech-card">
+            <h3>Dispositivo e gateway</h3>
+            <p>O gateway verifica se o dispositivo pode entrar na rede corporativa.</p>
+          </article>
+          <article class="tech-card">
+            <h3>Criptografia</h3>
+            <p>TLS protege o dado em tr&acirc;nsito. AES protege o dado parado no banco.</p>
+          </article>
+          <article class="tech-card">
+            <h3>IA e banco de dados</h3>
+            <p>A IA processa apenas o que &eacute; necess&aacute;rio e devolve uma resposta ao operador.</p>
+          </article>
+          <article class="tech-card">
+            <h3>DLP e SIEM</h3>
+            <p>DLP verifica perda de dados. SIEM monitora logs e registra os alertas.</p>
+          </article>
+          <article class="tech-card">
+            <h3>Condi&ccedil;&atilde;o de sucesso</h3>
+            <p>A simula&ccedil;&atilde;o termina quando os pacotes s&atilde;o tratados e os controles principais aparecem nas estat&iacute;sticas.</p>
+          </article>
+          <article class="tech-card">
+            <h3>Problemas simulados</h3>
+            <p>Intercepta&ccedil;&atilde;o no caminho, token indevido, dispositivo inseguro, perda de dados e banco sem prote&ccedil;&atilde;o adequada.</p>
+          </article>
+          <article class="tech-card">
+            <h3>Resposta correta</h3>
+            <p>Mostramos que cada tecnologia atua no ponto certo: IAM, Edge, TLS, AES, DLP e SIEM.</p>
+          </article>
+        </div>
+      </div>
+      <aside class="side-panel">
+        <div class="panel-card">
+          <h3>Como podemos apresentar</h3>
+          <ol>
+            <li>Inicie a simula&ccedil;&atilde;o.</li>
+            <li>Emita o token e autentique os Smart Glasses.</li>
+            <li>Gere os pacotes e conduza cada um pelo fluxo.</li>
+            <li>Quando surgir um incidente, escolha o controle correto.</li>
+            <li>Finalize e mostre as estat&iacute;sticas.</li>
+          </ol>
+        </div>
+        <div class="panel-card">
+          <h3>Resumo para o v&iacute;deo</h3>
+          <p>N&oacute;s somos a escuderia NotFound404, e neste site demonstramos como uma arquitetura corporativa pode proteger dados de Smart Glasses com IA, unindo ciberseguran&ccedil;a e &eacute;tica digital.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyC8cx5kZAl2c76hEMBly82aJyGXY2RNh1A",
+      authDomain: "gp-notfound404.firebaseapp.com",
+      projectId: "gp-notfound404",
+      storageBucket: "gp-notfound404.firebasestorage.app",
+      messagingSenderId: "260905545668",
+      appId: "1:260905545668:web:fd0be74886dd0860a8be91",
+      measurementId: "G-XYPH6LW8P9"
+    };
+
+    const firebaseApp = initializeApp(firebaseConfig);
+    getAnalytics(firebaseApp);
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
